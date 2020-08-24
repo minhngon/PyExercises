@@ -38,9 +38,24 @@ def solve(ip):
     '''
     result = None
     # Xoá dòng sau và viết code vào đây set các giá trị phù hợp
-    raise NotImplementedError("Học viên chưa làm bài này")
-
+    # raise NotImplementedError("Học viên chưa làm bài này")
+    result = action(ip)
     return result
+
+
+def action(n):
+    try:
+        arr = n.split(".")
+        rs = []
+        for i in arr:
+            if isinstance(int(i), int) and 0 < int(i) < 255:
+                bina = bin(int(i))
+                rs.append((bina[bina.find("b")+1:len(bina)].zfill(8)))
+            else:
+                return "Nhập IP không đúng format!"
+        return rs
+    except:
+        return "Nhập IP không đúng format không thể convert int to bin!"
 
 
 def main():

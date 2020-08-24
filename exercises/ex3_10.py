@@ -18,9 +18,18 @@ def solve(list1, list2):
     result = []
 
     # Xoá dòng raise và Viết code vào đây set result làm kết quả
-    raise NotImplementedError("Học viên chưa làm bài này")
-
+    # raise NotImplementedError("Học viên chưa làm bài này")
+    result = action(list1, list2)
     return result
+
+
+def action(n, m):
+    arr = []
+    for a in n:
+        for b in m:
+            if a == b and a not in arr and b not in arr:
+                arr.append(a)
+    return arr
 
 
 def main():

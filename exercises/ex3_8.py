@@ -14,9 +14,19 @@ def solve(input_data):
     result = None
 
     # Xoá dòng sau và viết code vào đây set các giá trị phù hợp
-    raise NotImplementedError("Học viên chưa làm bài này")
-
+    # raise NotImplementedError("Học viên chưa làm bài này")
+    result = action(str.lower(input_data))
     return result
+
+
+def action(n):
+    # str.lower(n)
+    st = n[::-1]
+    # print(n)
+    # print(st)
+    if st == n:
+        return True
+    return False
 
 
 def main():

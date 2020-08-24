@@ -22,8 +22,8 @@ def solve(input_data):
     result = None
 
     # Xoá dòng sau và viết code vào đây set các giá trị phù hợp
-    raise NotImplementedError("Học viên chưa làm bài này")
-
+    # raise NotImplementedError("Học viên chưa làm bài này")
+    result = input_data[0:input_data.rfind(".")]
     return result
 
 

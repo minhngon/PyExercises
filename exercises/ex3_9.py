@@ -22,11 +22,21 @@ def solve():
     result = None
 
     # Xoá dòng sau và viết code vào đây set các giá trị phù hợp
-    raise NotImplementedError("Học viên chưa làm bài này")
-
+    #raise NotImplementedError("Học viên chưa làm bài này")
+    result = action()
     return result
 
-
+def action():
+    max, result = 10, 10
+    min = 1
+    arr = []
+    for a in range(max-1,min-1,-1):
+        cal = result - a
+        for b in range(cal, max, cal):
+            c = (b / (result-a))
+            if c%1==0 and a + (b / c) == result:
+                arr.append([a, b, int(c)])
+    return arr
 def main():
     print(solve())
 

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-data = 1000
+data = 124
 
 
 def solve(input_data):
@@ -25,7 +25,11 @@ def solve(input_data):
 
     result = None
     # Xoá dòng raise và Viết code vào đây set result làm kết quả
-    raise NotImplementedError("Học viên chưa làm bài này")
+    # raise NotImplementedError("Học viên chưa làm bài này")
+    temp = (bin(input_data))
+    # temp = '11000'
+    # result = temp.rfind('1')
+    result = temp[temp.rfind('1'):len(temp)]
 
     return result
 

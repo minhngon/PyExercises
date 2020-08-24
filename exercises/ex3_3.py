@@ -15,11 +15,32 @@ def solve():
     :rtype: list
     '''
     result = None
-
+    arr = []
     # Xóa dòng sau và viết code vào đây set các gía trị phù hợp
-    raise NotImplementedError("Học viên chưa làm bài này")
-
+    # raise NotImplementedError("Học viên chưa làm bài này")
+    for i in range(1, 100):
+        if (BoiCua3(i) and BoiCua5(i)):
+            arr.append(str(i) + ": FizzBuzz")
+        elif (BoiCua3(i)):
+            arr.append(str(i) + ": Fizz")
+        elif (BoiCua5(i)):
+            arr.append(str(i) + ": Buzz")
+        else:
+            arr.append(str(i))
+    result = arr
     return result
+
+
+def BoiCua3(n):
+    if (n % 3 == 0):
+        return True
+    return False
+
+
+def BoiCua5(n):
+    if (n % 5 == 0):
+        return True
+    return False
 
 
 def main():

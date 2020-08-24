@@ -18,13 +18,20 @@ def solve():
     Lưu ý: Thứ tự tăng dần theo bảng cửu chương
     '''
     result = None
-
+    arr = []
     # Xoá dòng sau và viết code vào đây set các giá trị phù hợp
-    raise NotImplementedError("Học viên chưa làm bài này")
-
+    # raise NotImplementedError("Học viên chưa làm bài này")
+    for i in range(0,100):
+        res = calculate(i,5)
+        if res != None:
+            arr.append(res)
+    result = arr
     return result
 
-
+def calculate(n,i):
+    if n % i == 0:
+        return str(n) + " == " + str(n // i) + " * " + str(i)
+    
 def main():
     for i in solve():
         print(i)

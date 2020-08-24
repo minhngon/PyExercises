@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+import time
 
 data = '''
 Come to the
@@ -24,9 +25,33 @@ def solve(input_data):
     result = None
 
     # Xoá dòng raise và Viết code vào đây set result làm kết quả
-    raise NotImplementedError("Học viên chưa làm bài này")
+    # raise NotImplementedError("Học viên chưa làm bài này")
+    temp = input_data.split('\n')
+    start1 = time.time()
+    string = ''
+    string2 = ''
+    for i in range(1000):
+        for item in temp:
+            if item[:1].isupper():
+                string += item[:1]
+        string2 += string
+    result = string
+    end1 = time.time()
+    print(end1-start1)
+    
+    start2 = time.time()
+    string3 = []
+    for i in range(1000):
+        av = ''.join(i[:1] for i in temp if i[:1].isupper())
+        string3.append(av)
+    result = ''.join(string3)
+    end2 = time.time()
 
-    return result
+    print(end2-start2)
+    
+    
+
+    return None
 
 
 def main():

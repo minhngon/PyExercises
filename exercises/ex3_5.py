@@ -18,15 +18,16 @@ def solve(input_data):
     result = None
 
     # Xoá dòng sau và viết code vào đây set các giá trị phù hợp
-    raise NotImplementedError("Học viên chưa làm bài này")
-
+    # raise NotImplementedError("Học viên chưa làm bài này")
+    result = list(enumerate(input_data, start=1))
     return result
 
 
 def main():
     # xử lí in ra theo yêu cầu đề bài bên dưới
     # result = solve(data)
-    pass
+    # pass
+    print(solve(data))
 
 
 if __name__ == "__main__":
